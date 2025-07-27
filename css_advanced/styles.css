@@ -1,0 +1,159 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HERO SECTION: background shared by header and section */
+.hero {
+  background-image: url('./images/Object.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* NAV inside hero header */
+.hero header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  /*background-color: rgba(0, 0, 0, 0.6);  optional overlay */
+}
+
+/* Logo image */
+.hero header img {
+  height: 60px;
+}
+
+/* Nav links */
+.hero nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.hero nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* HERO SECTION MAIN CONTENT */
+.hero section {
+  padding: 80px 60px;
+}
+
+/* Text like “Get schooled” + tags + button */
+.hero section > div:first-child {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 5rem; /* Increase the size */
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Button */
+.hero button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #d387c9;
+  color: white;
+  border: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #e24c4c;
+}
+
+
+/* "Learn from the pros" section */
+/* Add spacing between button and h2 */
+.hero h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 60px; /* Space from the button */
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Horizontal layout for the 4 pro cards */
+.hero .pro-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  padding: 0 40px;
+}
+
+/* Style individual card */
+.hero .pro-cards div {
+  text-align: center;
+  width: 180px;
+  color: white;
+}
+
+.hero .pro-cards img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hero .pro-cards h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+
+.hero .pro-cards p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .hero .pro-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* .hero section > div:last-child {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero section > div:last-child div {
+  text-align: center;
+  width: 180px;
+}
+
+.hero section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+} */

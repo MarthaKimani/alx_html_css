@@ -271,3 +271,104 @@
     margin: 2.5%;
   }
 }
+/* MEMBERSHIP SECTION */
+
+.membership {
+  background-color: navy;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Style only the 'Free' text */
+.membership h2 span {
+  color: purple;
+}
+
+/* Select only the 4 divs inside .membership and make them horizontal */
+.membership > div {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%; /* 4 items ~ 100% width total with spacing */
+  margin: 10px 1%;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Image styling */
+.membership img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Heading inside each div */
+.membership h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+/* Paragraph inside each div */
+.membership p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Button styling */
+.membership button {
+  margin-top: 30px;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.membership button:hover {
+  background-color: #5e1d91;
+}
+.faq {
+  background-color: rgb(224, 224, 231);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.faq > div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.faq > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.faq > div > div > div {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .faq > div > div {
+    width: 100%;
+  }
+}

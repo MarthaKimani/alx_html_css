@@ -372,3 +372,38 @@
     width: 100%;
   }
 }
+.footer {
+  background-color: #0f1b2a; /* Dark navy */
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer img {
+  width: 150px;
+}
+
+.footer div i {
+  font-size: 20px;
+  margin-left: 15px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer div i:hover {
+  color: #6c757d; /* light gray on hover */
+}
+
+.footer p {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 20px;
+}

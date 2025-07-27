@@ -138,22 +138,41 @@
   }
 }
 
-
-/* .hero section > div:last-child {
+.testimonial {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6ccff; /* lilac purple */
+  padding: 60px 40px;
+  gap: 40px; /* space between image and quote */
+  color: #333;
 }
 
-.hero section > div:last-child div {
-  text-align: center;
-  width: 180px;
+/* Image styling */
+.testimonial img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px; /* space from edge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero section img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-} */
+/* Text content */
+.testimonial blockquote {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+  max-width: 500px;
+}
+
+.testimonial h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+}

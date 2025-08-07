@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    border: black 1px solid;
+}
+article {
+    flex: 2;
+    overflow-y: auto;
+    background-color: aquamarine;
+}
+aside {
+    flex: 1;
+    overflow-y: auto;
+    background-color: beige;
+}
+@media (min-width: 1100px) {
+	body {
+		width: 1100px;
+		margin: 0 auto;
+	}
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: aqua;
+}

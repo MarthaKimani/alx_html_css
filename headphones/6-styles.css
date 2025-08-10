@@ -1,0 +1,300 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-color: #ff6565;
+  --text-color: white;
+  --font-family: 'Helvetica', sans-serif;
+}
+
+/* Body base style */
+body {
+  font-family: var(--font-family);
+  background-color: black;
+  color: var(--text-color);
+}
+
+/* Container to wrap content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 12px 30px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.what-we-do {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service {
+  max-width: 250px;
+  padding: 20px;
+}
+
+.service-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 15px;
+  color: #ff2e63;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  color: #666;
+}
+/* ---------- Results & pentagon styles ---------- */
+
+.results {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.results h2 {
+  font-size: 2.25rem;
+  margin-bottom: 10px;
+}
+
+.results p.intro {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* grid container for cards */
+.pentagon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* card wrapper */
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* pentagon shape */
+.pentagon {
+  /* aspect-ratio keeps shape scalable */
+  width: 160px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  /* background color of the pentagon */
+  background: linear-gradient(180deg, #ff8b8b 0%, #ff6565 100%);
+  /* create pentagon with clip-path */
+  clip-path: polygon(
+    50% 0%,    /* top point */
+    95% 35%,   /* top-right */
+    78% 95%,   /* bottom-right */
+    22% 95%,   /* bottom-left */
+    5% 35%     /* top-left */
+  );
+  /* optional subtle shadow */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 250ms ease, filter 250ms ease;
+}
+
+/* hover effect */
+.pentagon:hover {
+  transform: translateY(-6px) scale(1.03);
+  filter: brightness(1.03);
+}
+
+/* inner content area (centered) */
+.pentagon-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 78%;
+  height: 78%;
+  /* ensure inner content isn't clipped */
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* stat number style */
+.stat {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* label under pentagon */
+.stat-label {
+  font-size: 0.95rem;
+  color: #333;
+  max-width: 200px;
+}
+
+/* responsive adjustments */
+@media (max-width: 480px) {
+  .pentagon {
+    width: 130px;
+  }
+  .stat {
+    font-size: 1.2rem;
+  }
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Utility: keep layout consistent if used elsewhere */
+.results-container > .result-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.contact button {
+  background-color: #FF6565;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #e04b4b;
+}
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer .logo img {
+  width: 150px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FF6565;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
